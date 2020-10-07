@@ -1,6 +1,7 @@
-#Packages
-install.packages("rriskdistributions")
-install.packages("logofgamma")
+ #Packages
+install.packages("rriskDistributions")
+install.packages("logOfGamma")
 
-library(rriskdistributions)
-library(logofgamma)
+library(rriskDistributions)
+library(logOfGamma)
+library(Rcmdr)
