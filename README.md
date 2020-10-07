@@ -13,7 +13,7 @@
 ## The R Project for Statistical Computing
 https://www.r-project.org/
 
-#### R Online
+#### R Binder
 Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
 
 RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
