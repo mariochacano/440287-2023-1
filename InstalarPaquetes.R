@@ -1,4 +1,4 @@
- #Packages
+#Packages
 install.packages("rriskDistributions")
 install.packages("logOfGamma")
 
