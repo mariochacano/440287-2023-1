@@ -9,3 +9,11 @@
 | ------ | ------ | ------ |
 | rriskDistributions | [rriskDistributions.pdf](https://github.com/mariochacano/440198-1-2020-2/blob/main/rriskDistributions.pdf) | https://cran.r-project.org/web/packages/rriskDistributions/index.html |
 | logOfGamma | [logOfGamma.pdf](https://github.com/mariochacano/440198-1-2020-2/blob/main/logOfGamma.pdf) | https://cran.r-project.org/web/packages/logOfGamma/index.html |
+
+## The R Project for Statistical Computing
+https://www.r-project.org/
+
+#### R Online
+Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
+
+RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
