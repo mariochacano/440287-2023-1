@@ -13,12 +13,12 @@ Mario A.
 | Fitting Distributions to Given Data or Known Quantiles | [rriskDistributions.pdf](https://cran.r-project.org/web/packages/rriskDistributions/rriskDistributions.pdf) | https://cran.r-project.org/web/packages/rriskDistributions/index.html |
 | Natural Logarithms of the Gamma Function for Large Values | [logOfGamma.pdf](https://cran.r-project.org/web/packages/logOfGamma/logOfGamma.pdf) | https://cran.r-project.org/web/packages/logOfGamma/index.html |
 
-## R Programming
+## R Programming (Software Installation)
 [RStudio](https://rstudio.com/)
 
 [The R Project for Statistical Computing](https://www.r-project.org/)
 
-#### R Binder
+## R Binder (Online)
 RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
 
 Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
