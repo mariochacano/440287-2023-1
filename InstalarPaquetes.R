@@ -1,7 +1,9 @@
 #Packages
-install.packages("rriskDistributions")
-install.packages("logOfGamma")
+install.packages("pacman")
 
-library(rriskDistributions)
-library(logOfGamma)
-library(Rcmdr)
+pacman::p_load(
+  MASS,
+  survival,
+  fitdistrplus,
+  ggplot2,
+  tidyr)
