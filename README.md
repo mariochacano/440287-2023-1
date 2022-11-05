@@ -14,9 +14,11 @@ Mario A.
 | Natural Logarithms of the Gamma Function for Large Values | [logOfGamma.pdf](https://cran.r-project.org/web/packages/logOfGamma/logOfGamma.pdf) | https://cran.r-project.org/web/packages/logOfGamma/index.html |
 
 ## R Programming (Software Installation)
-[RStudio](https://rstudio.com/)
-
+Language & R GUI
 [The R Project for Statistical Computing](https://www.r-project.org/)
+
+IDE
+[RStudio](https://rstudio.com/)
 
 ## R Binder (Online)
 RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
