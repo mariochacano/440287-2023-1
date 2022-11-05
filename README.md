@@ -15,9 +15,11 @@ Mario A.
 
 ## R Programming (Software Installation)
 Language & R GUI
+
 [The R Project for Statistical Computing](https://www.r-project.org/)
 
 IDE
+
 [RStudio](https://rstudio.com/)
 
 ## R Binder (Online)
