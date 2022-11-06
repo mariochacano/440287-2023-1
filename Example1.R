@@ -1,21 +1,34 @@
 #Load Packages
+library(readxl)
+library(ggplot2)
 library(MASS)
 library(survival)
 library(fitdistrplus)
 library(tidyr)
+library(dplyr)
 
 # Data
 Dataset <- c(110,120,220,220,220,330)
 
 #Parameters from fitting
-swp <- fitdist(Dataset, dist="weibull")
-.beta <- as.numeric(swp$estimate["shape"])	#shape
-.eta <- as.numeric(swp$estimate["scale"])		#scale
-.gamma <- 0                                 #location
+fwp <- function(x){
+  swp <- fitdist(x, dist="weibull")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  print(paste("shape =",.beta))
+  print(paste("scale =",.eta))
+  print(paste("location =",.gamma))
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma)
+  return(result)
+}
 
+wp <- fwp(Dataset)
 
 # FUNCTIONS
-R <- function(t){exp(-(((t-.gamma)/.eta)^(.beta)))}
-F <- function(t){1-R(t)}
-H <- function(t){(.beta/.eta)*((t/.eta)^(.beta-1))}
-WeibullMean <- function(.beta,.eta,.gamma){.gamma+.eta*gamma(1+(1/.beta))}
+R <- function(t,wp){exp(-(((t-wp$location)/wp$scale)^(wp$shape)))}
+F <- function(t,wp){1-R(t,wp)}
+H <- function(t,wp){(wp$shape/wp$scale)*((t/wp$scale)^(wp$shape-1))}
+WeibullMean <- function(wp){wp$location+wp$scale*gamma(1+(1/wp$shape))}
+
+WeibullMean(wp)
