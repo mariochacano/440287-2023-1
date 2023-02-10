@@ -1,4 +1,4 @@
-## All Weibull Functions are described by a list called wp, this list contains the weibull parameters shape, scale, location.
+## All Weibull Functions are described by a list called "wp", this list contains the weibull parameters shape, scale, location.
 
 # Weibull Reliability Function
 WR <- function(t,wp){exp(-(((t-wp$location)/wp$scale)^(wp$shape)))}
