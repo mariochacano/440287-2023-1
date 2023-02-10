@@ -1,16 +1,11 @@
 #Load Packages
-library(readxl)
-library(ggplot2)
-library(MASS)
-library(survival)
+library(tidyverse)
 library(fitdistrplus)
-library(tidyr)
-library(dplyr)
 
-# Data for example
-Dataset <- c(110,120,220,220,220,330)
+# Load Weibull Functions
+source(paste(getwd(),"/WeibullFunctions.R", sep=""))
 
-#Parameters from fitting weibull MLE
+# Parameters from fitting weibull MLE
 fwp <- function(x){
   swp <- fitdist(x, dist="weibull")
   .beta <- as.numeric(swp$estimate["shape"])	#shape
@@ -23,13 +18,7 @@ fwp <- function(x){
   return(result)
 }
 
-# Weibull Distribution Functions
-R <- function(t,wp){exp(-(((t-wp$location)/wp$scale)^(wp$shape)))}
-F <- function(t,wp){1-R(t,wp)}
-H <- function(t,wp){(wp$shape/wp$scale)*((t/wp$scale)^(wp$shape-1))}
-WeibullMean <- function(wp){wp$location+wp$scale*gamma(1+(1/wp$shape))}
-
-# Some Results
+# Example 1
+Dataset <- c(110,120,220,220,220,330)
 wp <- fwp(Dataset)
-WeibullMean(wp)
-R(0,wp)
+(MTBF <- WMean(wp))
