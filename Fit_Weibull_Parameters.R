@@ -1,6 +1,21 @@
 #load Packages
 library(fitdistrplus)
 
+#Parameters from fitting weibull from linear regression
+fit_Wp_LR <- function(df){
+  model <- lm(y ~ x, data =df)
+  swp <- summary(model)
+  .intercept <- swp$coefficients[1] #intercept of linear regression
+  .slope <- swp$coefficients[2] #slope of linear regression
+  
+  .beta =.slope	                      #shape
+  .eta <- exp(-(.intercept/.slope))		#scale
+  .gamma <- 0                         #location
+  .r2 <- swp$r.squared       #R-squared
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma, "R2"=.r2)
+  return(result)
+}
+
 #Parameters from fitting weibull maximum likelihood estimation
 fit_Wp_MLE <- function(datavec){
   swp <- fitdist(datavec, distr="weibull", method="mle")
