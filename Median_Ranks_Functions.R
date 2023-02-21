@@ -24,3 +24,10 @@ kaplan_meier_MR <- function(df){
            "MR" = accumulate(y1, ~ 1-.y*(1-.x), .init = 0)[-1]) %>% 
     dplyr::select(-y1,-pos)
 }
+
+LSR <- function(df){ #Least Squares Regression
+  df %>% mutate(
+    "x"=log(.[1] %>% unlist()),
+    "y"=log(log(1/(1-MR)))
+  )
+}
