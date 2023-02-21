@@ -1,15 +1,76 @@
-## All Weibull Functions are described by a list called "wp", this list contains the weibull parameters shape, scale, location and other metrics
+## All Weibull Functions are described by a list called "wp", this list contains the weibull parameters shape, scale, location.
+
+#load Packages
+library(fitdistrplus)
+
+#Parameters from fitting weibull maximum likelihood estimation
+fit_Wp_MLE <- function(datavec){
+  swp <- fitdist(datavec, distr="weibull", method="mle")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  .AIC <- swp$aic                             #Akaike information criterion
+  .BIC <- swp$bic                             #Bayesian information criterion
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma, "AIC"=.AIC, "BIC"=.BIC)
+  return(result)
+}
+
+#Parameters from fitting weibull maximum goodness-of-fit estimation
+fit_Wp_MGE <- function(datavec){
+  swp <- fitdist(datavec, distr="weibull", method="mge")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  .AIC <- swp$aic                             #Akaike information criterion
+  .BIC <- swp$bic                             #Bayesian information criterion
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma, "AIC"=.AIC, "BIC"=.BIC)
+  return(result)
+}
+
+#Parameters from fitting weibull maximum spacing estimation
+fit_Wp_MSE <- function(datavec){
+  swp <- fitdist(datavec, distr="weibull", method="mse")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  .AIC <- swp$aic                             #Akaike information criterion
+  .BIC <- swp$bic                             #Bayesian information criterion
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma, "AIC"=.AIC, "BIC"=.BIC)
+  return(result)
+}
+
+#Parameters from fitting weibull quantile matching estimation
+fit_Wp_QME <- function(datavec){
+  swp <- fitdist(datavec, distr="weibull", method="qme")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma)
+  return(result)
+}
+
+#Parameters from fitting weibull moment matching estimation
+fit_Wp_MME <- function(datavec){
+  swp <- fitdist(datavec, distr="weibull", method="mme")
+  .beta <- as.numeric(swp$estimate["shape"])	#shape
+  .eta <- as.numeric(swp$estimate["scale"])		#scale
+  .gamma <- 0                                 #location
+  result <- list("shape"=.beta, "scale"=.eta, "location"=.gamma)
+  return(result)
+}
 
 # Weibull Reliability Function
-WR <- function(t,wp){exp(-(((t-wp$location)/wp$scale)^(wp$shape)))}
+WR <- function(wp,t){exp(-(((t-wp$location)/wp$scale)^(wp$shape)))}
 
-inv_WR <- function(r,wp){(wp$scale*((-log(r))^(1/wp$shape)))+wp$location}
+inv_WR <- function(wp,r){(wp$scale*((-log(r))^(1/wp$shape)))+wp$location}
 
 # Weibull Cumulative Distribution Function
-Wcdf <- function(t,wp){1-(exp(-(((t-wp$location)/wp$scale)^(wp$shape))))}
+Wcdf <- function(wp,t){1-(exp(-(((t-wp$location)/wp$scale)^(wp$shape))))}
+
+inv_Wcdf <- function(wp,nr){(wp$scale*((-log(1-nr))^(1/wp$shape)))+wp$location}
 
 # Weibull Hazard Function
-WH <- function(t,wp){(wp$shape/wp$scale)*(((t-wp$location)/wp$scale)^(wp$shape-1))}
+WH <- function(wp,t){(wp$shape/wp$scale)*(((t-wp$location)/wp$scale)^(wp$shape-1))}
 
 # Weibull Mean
 WMean <- function(wp){wp$location+(wp$scale*gamma(1+(1/wp$shape)))}
