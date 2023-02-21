@@ -1,6 +1,6 @@
-<img src="http://www.ubiobio.cl/mcc/images/logosimbologia.png" width="75.66667" height="113.3333" /> | <p align="left">Universidad del Bío Bío<br/> Engineering Faculty<br/> Mechanical Engineering Department</p>
+<img src="http://www.ubiobio.cl/mcc/images/logosimbologia.png" width="75.66667" height="113.3333" /> | <p align="left">Bío Bío University<br/> Engineering Faculty<br/> Mechanical Engineering Department</p>
 :-------------------------:|:-------------------------:
-# __<p align="center">Asset Management & Maintenance </p>__
+# __<p align="center">Asset Management & Maintenance</p>__
 Greetings and Welcome, I invite you to review the content and participate actively in each activities and subjects that we will discuss on the course.
 Mario A.
 ## R Programming (Software Installation)
