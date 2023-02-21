@@ -8,7 +8,7 @@ i_kaesimo_MR <- function(df){
     dplyr::select(-pos)
   }
 
-bernard_RRX_MR <- function(df){
+bernard_MR <- function(df){
   n <- nrow(df)
   df %>% 
     mutate("pos"=as.numeric(rownames(.))) %>%
