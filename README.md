@@ -1,11 +1,9 @@
 <img src="http://www.ubiobio.cl/mcc/images/logosimbologia.png" width="75.66667" height="113.3333" /> | <p align="left">Universidad del Bío Bío<br/> Facultad de Ingeniería<br/> Departamento de Ingeniería Mecánica</p>
 :-------------------------:|:-------------------------:
-# __<p align="center">Gestión de Activos & Mantenimiento</p>__
-Estimad@ Alumn@,  
-La más cordial bienvenida, lo invito a revisar el contenido y participar activamente de cada una de las actividades y materias que trataremos a lo largo de la asignatura.  
-Saludos,  
+# __<p align="center">Asset Management & Maintenance </p>__
+Welcome, I invite you to review the content and participate actively in each of the activities and subjects that we will discuss across the course.
+Greetings,
 Mario A.
-
 ## R Programming (Software Installation)
 Language & R GUI
 
