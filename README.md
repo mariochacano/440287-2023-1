@@ -3,21 +3,20 @@
 # __<p align="center">Asset Management & Maintenance</p>__
 Greetings and Welcome, I invite you to review the content and participate actively in each activities and subjects that we will discuss on the course.
 Mario A.
-## R Programming (Software Installation)
-Language & R GUI
 
-1.- [The R Project for Statistical Computing](https://www.r-project.org/)
+## R Language
+The main Language for programming on this course is R, R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.
 
-IDE
+### First Install Language & R GUI
+[The R Project for Statistical Computing](https://www.r-project.org/)
 
-2.- [RStudio](https://rstudio.com/)
+### Second Install the Integrated Development Environment (IDE) for R
+[RStudio](https://rstudio.com/)
 
-## R Binder (Online)
-RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=rstudio)
-
-(https://mybinder.org/v2/gh/mariochacano/r/main?urlpath=rstudio)
-
-Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?filepath=index.ipynb)
+If you do not have the option to install it on your personal computer, you can run it from a ephemeral environment as follows:
+### R Binder (Online)
+RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mariochacano/r/main?urlpath=rstudio)
+Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mariochacano/r/main?filepath=index.ipynb)
 
 ## Packages
 | Package | Description | Webpage |
