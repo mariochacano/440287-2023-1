@@ -4,21 +4,22 @@
 Greetings and Welcome, I invite you to review the content and participate actively in each activities and subjects that we will discuss on the course.
 Mario A.
 
-## R Language
+### R Language
 The main Language for programming on this course is R, R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.
 
-### First Install Language & R GUI
+##### First Install Language & R GUI
 [The R Project for Statistical Computing](https://www.r-project.org/)
 
-### Second Install the Integrated Development Environment (IDE) for R
+##### Second Install the Integrated Development Environment (IDE) for R
 [RStudio](https://rstudio.com/)
 
 If you do not have the option to install it on your personal computer, you can run it from a ephemeral environment as follows:
-### R Binder (Online)
+##### R Binder (Online)
 RStudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mariochacano/r/main?urlpath=rstudio)
+
 Jupyter+R: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/mariochacano/r/main?filepath=index.ipynb)
 
-## Packages
+### Packages
 | Package | Description | Webpage |
 | ------ | ------ | ------ |
 | Rcmdr | R Commander: A platform-independent basic-statistics GUI (graphical user interface) for R, based on the tcltk package. | https://cran.r-project.org/web/packages/Rcmdr/index.html |
